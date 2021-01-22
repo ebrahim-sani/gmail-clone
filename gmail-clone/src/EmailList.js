@@ -20,7 +20,7 @@ function EmailList() {
 
   useEffect(() => {
     db.collection("emails")
-      .orderBy("desc", "timestamp")
+      .orderBy("timestamp", "desc")
       .onSnapshot((snapshot) =>
         setEmails(
           snapshot.docs.map((doc) => ({
@@ -30,6 +30,7 @@ function EmailList() {
         )
       );
   }, []);
+  console.log(emails);
   return (
     <div className="emailList">
       <div className="emailList_settings">
@@ -76,6 +77,78 @@ function EmailList() {
             time={new Date(timestamp?.seconds * 1000).toUTCString()}
           />
         ))}
+        <EmailRow
+          title="Google"
+          subject="Google Security"
+          description="Your account has.."
+          time="7pm"
+        />
+        <EmailRow
+          title="Google"
+          subject="Google Security"
+          description="Your account has.."
+          time="7pm"
+        />
+        <EmailRow
+          title="Google"
+          subject="Google Security"
+          description="Your account has.."
+          time="7pm"
+        />
+        <EmailRow
+          title="Google"
+          subject="Google Security"
+          description="Your account has.."
+          time="7pm"
+        />
+        <EmailRow
+          title="Google"
+          subject="Google Security"
+          description="Your account has.."
+          time="7pm"
+        />
+        <EmailRow
+          title="Google"
+          subject="Google Security"
+          description="Your account has.."
+          time="7pm"
+        />
+        <EmailRow
+          title="Google"
+          subject="Google Security"
+          description="Your account has.."
+          time="7pm"
+        />
+        <EmailRow
+          title="Google"
+          subject="Google Security"
+          description="Your account has.."
+          time="7pm"
+        />
+        <EmailRow
+          title="Google"
+          subject="Google Security"
+          description="Your account has.."
+          time="7pm"
+        />
+        <EmailRow
+          title="Google"
+          subject="Google Security"
+          description="Your account has.."
+          time="7pm"
+        />
+        <EmailRow
+          title="Google"
+          subject="Google Security"
+          description="Your account has.."
+          time="7pm"
+        />
+        <EmailRow
+          title="Google"
+          subject="Google Security"
+          description="Your account has.."
+          time="7pm"
+        />
         <EmailRow
           title="Google"
           subject="Google Security"
